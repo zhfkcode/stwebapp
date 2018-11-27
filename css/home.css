@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+KISSY CSS Reset
+理念：清除和重置是紧密不可分的
+特色：1.适应中文 2.基于最新主流浏览器
+*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* 清除内外边距 */
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* 结构元素 */
+dl, dt, dd, ul, ol, li, /* 列表元素 */
+pre, /* 文本格式元素 */
+fieldset, lengend, button, input, textarea, form, /* 表单元素 */
+th, td, /* 表格元素 */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体样式 */
+html, body, a, button, input, select, textarea {
+    color: #4D4D4D;
+    line-height: 1;
+    font-size: 14px;
+    font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* 移动端去掉滚动条 */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* 清除部分移动端默认样式 */
+button, input, select, textarea {
+    outline: none;
+	vertical-align: middle;
+	-ms-appearance: none;
+	-moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+/* 修改placeholder的颜色 */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: #D2D2D2;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder{
+    color: #D2D2D2;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+    color: #D2D2D2;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+    color: #D2D2D2;
+}
+
+/* 修改disabled的默认样式 */
+input[disabled],
+input:disabled,
+input.disabled,
+textarea[disabled],
+textarea:disabled,
+textarea.disabled,
+select[disabled],
+select:disabled,
+select.disabled {
+    background: transparent;
+    -webkit-text-fill-color: #4D4D4D;
+    color: #4D4D4D;
+	-webkit-opacity: 1;
+    opacity: 1;
+}
+
+/* 重置a标签文本格式 */
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+span, em{
+    display: inline-block;
+}
+
+/* 重置h标签 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "微软雅黑", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+abbr[title], acronym[title], dfn[title] {
+    border-bottom: 1px dotted #4D4D4D;
+    cursor: help;
+}
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置表单元素 */
+legend { color: #4D4D4D; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+ }
+.clearfix { *zoom: 1; }
+
+/* 重置 hr */
+hr {
+	display: block;
+    border: none;
+    height: 1px;
+}
+
+/* 重置 pre */
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+/* 重置 blockquote, q 标签*/
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+
+/* Vue未编译处理 */
+[v-cloak] {
+    display: none;
+}
+
+
+/* home */
+html { 
+    font-size : 100px; 
+    }
+    
+    @media only screen and (min-width: 320px) and (max-width: 479px){ 
+    html { 
+    font-size: 42.67px !important; 
+    } 
+    } 
+    @media only screen and (min-width: 480px) and (max-width: 639px){ 
+    html { 
+    font-size: 64px !important; 
+    } 
+    } 
+    @media only screen and (min-width: 640px) and (max-width: 749px){ 
+    html { 
+    font-size: 85.34px !important; 
+    } 
+    }
+    
+    @media only screen and (min-width: 750px) and (max-width: 959px){ 
+    html { 
+    font-size: 100px !important; 
+    } 
+    } 
+    @media only screen and (min-width: 960px) and (max-width: 1241px){ 
+    html { 
+    font-size: 128px !important; 
+    } 
+    }
+    
+    @media only screen and (min-width: 1242px){ 
+    html { 
+    font-size: 165.6px !important; 
+    } 
+    }
+    .clearfix:after{content:"";height:0;line-height:0;display:block;visibility:hidden;clear:both；
+        
+        　　　　　}
+header{position: fixed;top:0;left:0;width:100%;height:1rem;z-index: 9;overflow: hidden;background: #fff;}
+.head{padding:0.2rem 0.4rem;overflow: hidden;}
+.head .left{float: left; width:1.7rem;}
+.head .right{float: right;margin-top:0.16rem;}
+.head .right img{width:0.4rem}
+.nav-box{display:none;position: fixed;z-index: 15;right:0;top:0;
+width:4.6rem;height:100vh;background:rgba(0,0,0,1);opacity:0.8;color:#fff;padding-top:0.97rem;overflow: hidden;}
+.nav-box .close{position: absolute;right:0.39rem;top:0.35rem;}
+.nav-box .nav-list li{font-size:0.24rem;line-height: 0.8rem;padding-left:0.4rem;}
+.nav-box .nav-list li.active{background:rgba(252,142,43,1);}
+.container{padding-top:1rem;}
+.container .section{padding:0 0.4rem;}
+.section .comtitle{text-align: center;}
+.section .comtitle img{width:4rem;padding-top:0.6rem;padding-bottom:0.4rem;}
+.teach-cont img{position:absolute;width:3.42rem;}
+.teach-cont{overflow: hidden;}
+.teach-cont .text{float:right;width:3.6rem;height:2.58rem;background:rgba(13,46,82,1);;margin-top:30px;font-size:0.24rem;color:#fff;}
+.teach-cont .text p{margin-left:0.7rem;}
+.teach-cont .text .data{margin-top:0.81rem;margin-bottom:0.38rem;}
+.teach-cont .text .speci{color:#FC8E2B}
+.section .intro{font-size:0.22rem;color:#666;line-height:0.38rem;margin:0.22rem 0;text-indent: 0.45rem;}
+.section .slogn{width:4rem;float:right;margin-bottom:0.6rem;}
+.aboutUs{background: url(../images/bg.png) no-repeat 100%/cover;height:8.65rem;}
+.aboutUs .comtitle img{padding-bottom:0.1rem;}
+.aboutUs .about-cont{position: relative;}
+.about-cont::before{display:block;content: '';width:0.58rem;height:0.61rem;background:rgba(255,255,255,1);opacity:0.5; }
+.aboutUs .usIntro{position: absolute; top:0.3rem;left:0.3rem;;}
+.aboutUs .usIntro img{width:100%;vertical-align: middle;}
+.aboutUs .text{font-size:0.2rem;color:#fff;background:#FC8E2B;text-indent:0.45rem;line-height: 0.35rem;padding:0.22rem 0.35rem;margin-left:0.1rem;}
+.container .master{padding:0;height: 3.88rem;}
+.master .grayBg{background: #f5f5f5;position: absolute;width:100%;height:3.88rem;z-index:-1;}
+.master .master-cont{margin-left:0.4rem;}
+.course .coursels-list{display: flex;justify-content: space-between;flex-wrap: wrap;margin-bottom:0.3rem;}
+.coursels-list li{width: 2.98rem; padding:0.11rem;box-shadow: 0 0 10px #f4f4f4;margin-bottom:0.3rem;}
+.coursels-list li img{width:100%;}
+.coursels-list li dd{font-size:0.22rem;margin-top:0.2rem;margin-bottom:0.09rem;color:#333;}
+.container .offline{background:rgba(245,245,245,1);padding-bottom:0.3rem;}
+.offline .off-text{background:#fff;margin-bottom:0.3rem;}
+.offline .img-wrap{position: relative;overflow: hidden}
+.offline .img-wrap img{width:100%;}
+.offline .img-wrap .tip{position:absolute;bottom:0;left:0;font-size:0.26rem;line-height:0.6rem;width:100%;color:#fff;background:rgba(0,0,0,0.6);padding-left:0.2rem;}
+.offline .text{line-height: 0.36rem;font-size:0.2rem;padding:0.2rem;}
+.contact .company-list{border-bottom:1px solid #F5F5F5;}
+.contact .company-list .title{font-size:0.24rem;color:#0C2C4F;line-height:0.6rem;}
+.contact .company-list .title .add{float:right;margin-right:0.2rem;}
+.contact .company-list>li{padding-left:0.2rem;border:1px solid #F5F5F5;border-bottom:0;}
+.contact .company-list .content{font-size:0.22rem;line-height: 0.4rem;padding:0.2rem;display: flex;justify-content: space-between;}
+.company-list .content img{width:1.1rem;}
+
+
